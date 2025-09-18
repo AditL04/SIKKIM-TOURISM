@@ -1,0 +1,6 @@
+#ignore firebase service account
+serviceAccountKey.json
+#ignore dependencies
+node_modules/
+#ignore environment variables
+.env
