@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monasteries Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+   <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <style>
+    #map { width: 100vw; height: 100vh; }
+   body {
+  margin: 0;
+  display: flex;
+  font-family: 'Segoe UI', serif;
+  color: #0f1817;
+  border: 1px solid #285367;
+
+}
+#info-cards {
+  width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #3b7564;
+  padding: 10px;
+  box-shadow: 10px 0 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+#info-cards h2 {
+  margin-top: 0;
+  font-size: 23px;
+  text-align: center;
+  color: #fffd9d;
+}
+.card {
+  background: #f9f9f9;
+  border: 2.5px solid #ffef84;
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.card:hover {
+  background: #d6d696;
+}
+.card-title {
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.card-details {
+  font-size: 15px;
+  color: #1f0a12;
+}
+  </style>
+</head>
+<body>
+  <div id="info-cards">
+    <h2>MONASTERY INFO</h2>
+    <div id="card-list"></div>
+  </div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script> 
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="https://cdn.getbutton.io/chatbot.js"></script>
+
+  <script>
+   const map = L.map('map').setView([27.57, 88.48], 10); // coordinates for sikkim with zoom in of 10 , can be changed 
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+L.Control.geocoder({ defaultMarkGeocode: true }).addTo(map);
+
+L.marker([27.2886, 88.5614]).addTo(map) //east monastries
+    .bindPopup('<b>Rumtek Monastery</b><br><i>Founded: 1966</i> </br>Open to Visitors.')
+    .openPopup();
+L.marker([27.3358, 88.6192]).addTo(map)
+    .bindPopup('<b>Enchey Monastery</b><br><i>Founded: 1909</i></br>Open to Visitors.')
+    .openPopup();
+L.marker([27.3308, 88.5794]).addTo(map)
+    .bindPopup('<b>Lingdum Monastery</b><br><i>Founded: 1999</i></br>Open to Visitors.')
+    .openPopup();
+L.marker([27.3261, 88.6150]).addTo(map)
+    .bindPopup('<b>Tsuk La Khang Monastery</b><br><i>Founded: 1898</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3261, 88.6086 ]).addTo(map)
+    .bindPopup('<b>Do Drul Chorten Stupa</b><br><i>Founded: 1945</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3044, 88.2588]).addTo(map) //west monastries
+    .bindPopup('<b>Pemayangste Monastery</b><br><i>Founded: 1705</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.6017, 88.3833]).addTo(map)
+    .bindPopup('<b>Dubdi Monastery</b><br><i>Founded: 1701</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3083, 88.2981]).addTo(map)
+    .bindPopup('<b>Tashiding Monastery</b><br><i>Founded: 1717</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2639, 88.2214]).addTo(map)
+    .bindPopup('<b>Sanga Choeling Monastery</b><br><i>Founded: 1697</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3453, 88.1947]).addTo(map)
+    .bindPopup('<b>Khecheopalri Monastery</b><br><i>Founded: 14th Century</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2408, 88.5881]).addTo(map)
+    .bindPopup('<b>Karthok Monastery</b><br><i>Founded: 1840</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2353, 88.2685]).addTo(map)
+    .bindPopup('<b>Rinchenpong Monastery</b><br><i>Founded: 1730</i> </br>Open to Visitors')
+    .openPopup();
+L.marker([27.4203, 88.6103]).addTo(map) // north monastries
+    .bindPopup('<b>Phensang Monastery</b><br><i>Founded: 1721</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.4128, 88.5839]).addTo(map)
+    .bindPopup('<b>Phodong Monastery</b><br><i>Founded: 1740</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.4181, 88.5794]).addTo(map)
+    .bindPopup('<b>Labrang Monastery</b><br><i>Founded: 1844</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.7161, 88.5567]).addTo(map)
+    .bindPopup('<b>Lachen Monastery</b><br><i>Founded: 1858</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.6167, 88.6500]).addTo(map)
+    .bindPopup('<b>Lachung Monastery</b><br><i>Founded: 1850</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.6331, 88.4667]).addTo(map)
+    .bindPopup('<b>Tolung Monastery</b><br><i>Founded: 1789</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.6833, 88.6333]).addTo(map)
+    .bindPopup('<b>Tsungthang Monastery</b><br><i>Founded: 1788</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.7167, 88.6167]).addTo(map)
+    .bindPopup('<b>Tingbung Monastery</b><br><i>Founded: 1843</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.6167, 88.7167]).addTo(map)
+    .bindPopup('<b>Malam Monastery</b><br><i>Founded: 1928</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3283, 88.3347]).addTo(map) //south monastries
+    .bindPopup('<b>Ralong Monastery</b><br><i>Founded: 1730</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2264, 88.4575]).addTo(map)
+    .bindPopup('<b>Bermoik Monastery</b><br><i>Founded: 1873</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2881, 88.3440]).addTo(map)
+    .bindPopup('<b>Dalling Monastery</b><br><i>Founded: 1915</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2800, 88.3200]).addTo(map)
+    .bindPopup('<b>Kewzing Monastery</b><br><i>Founded: 1974</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3000, 88.4333]).addTo(map)
+    .bindPopup('<b>Yangyang Monastery</b><br><i>Founded: 1935</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.1700, 88.3700]).addTo(map)
+    .bindPopup('<b>Namchi Monastery</b><br><i>Founded: 20th Century</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.3389, 88.6131]).addTo(map)
+    .bindPopup('<b>Burtuk Amalok Monastery</b><br><i>Founded: 1948</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2433, 88.3794]).addTo(map)
+    .bindPopup('<b>Wok Parbong Monastery</b><br><i>Founded: 1915</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2430, 88.3790]).addTo(map)
+    .bindPopup('<b>Mangbru Monastery</b><br><i>Founded: 1796</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2435, 88.3795]).addTo(map)
+    .bindPopup('<b>Line Phagyal Monastery</b><br><i>Founded: 1860</i></br>Open to Visitors')
+    .openPopup();
+L.marker([27.2438, 88.3796]).addTo(map)
+    .bindPopup('<b>Ben Monastery</b><br><i>Founded: 1902</i></br>Open to Visitors')
+    .openPopup(); 
+ 
+ const monasteries = [
+      [27.2886, 88.5614], // Rumtek
+      [27.3044, 88.2588], // Pemayangtse
+      [27.3083, 88.2981], // Tashiding
+      [27.2639, 88.2214], // Sanga Choeling
+      [27.7161, 88.5567], // Lachen
+      [27.6167, 88.6500], // Lachung
+      [27.3283, 88.3347], // Ralong
+      [27.2800, 88.3200], // Kewzing
+      [27.2438, 88.3796], // Ben
+      [27.3358, 88.6192], // Enchey
+      [27.3308, 88.5794], // Lingdum
+      [27.3261, 88.6150], // Tsuk La Khang
+      [27.3261, 88.6086], // Do Drul Chorten
+      [27.6017, 88.3833], // Dubdi
+      [27.3453, 88.1947], // Kheocheolpalri
+      [27.2408, 88.5881], // Karthok
+      [27.4203, 88.6103], // Phensang
+      [27.4128, 88.5839], // Phodong
+      [27.4181, 88.5794], // Labrong
+      [27.6331, 88.4667], // Tolung
+      [27.2264, 88.4575], // Bermoik
+      [27.2264, 88.3440], // Dalling,Doling
+      [27.3000, 88.4333], // Yang Yang
+      [27.1700, 88.3700], // Namchi
+      [27.2353, 88.2685], // Rinchenpong
+      [27.7167, 88.6167], // Tingbung
+      [27.3389, 88.6131], // Burtuk Amalok 
+      [27.2433, 88.3794], // Wok Parbong
+      [27.2430, 88.3790], // Mangbru
+      [27.2435, 88.3795], // Line Phagyal
+      [27.6167, 88.7167], // Malam
+      [27.6833, 88.6333], // Tsungthang
+
+    ];
+   monasteries.forEach((coords, index) => { L.marker(coords).addTo(map) 
+    .bindPopup(`<b>Monastery ${index + 1}</b><br>Lat: ${coords[0]}, Lng: ${coords[1]}`
+    );
+ }); 
+
+ L.Routing.control({ waypoints: monasteries.map(coords => L.latLng(coords[0], coords[1])), 
+ router: L.Routing.osrmv1({ serviceUrl: 'https://router.project-osrm.org/route/v1' }), 
+ lineOptions: { styles: [{ color: 'red', weight: 2, opacity: 0.8 }] },
+showAlternatives: false,
+routeWhileDragging: false,
+addWaypoints: false,
+fitSelectedRoutes: true ,
+createMarker: function() { return null; },
+show: false
+
+}).addTo(map); 
+const cardList = document.getElementById('card-list');
+
+const monasteryData = [
+  {
+    name: '<u>Rumtek Monastery</u>',
+    coords: [27.2886, 88.5614],
+    history: '<br>Seat of the Karma Kagyu lineage, rebuilt in 1966 by the 16th Karmapa as the Dharma Chakra Centre.</br><b>Open to Visitors</b>.',
+    hours: '6 AM – 6 PM'
+  },
+  {
+    name: '<u>Pemayangtse Monastery</u>',
+    coords: [27.3044, 88.2588],
+    history: '<br>Founded in the 17th century by Lhatsun Chempo, it’s the head monastery of the Nyingma order in Sikkim.</br><b>Open to Visitors</b>.',
+    hours: '9 AM – 5 PM'
+  },
+  {
+    name: '<u>Tashiding Monastery</u>',
+    coords: [27.3083, 88.2981],
+    history: '<br>Established in 1651, it’s revered as the most sacred Nyingma monastery, founded by Ngadak Sempa Chempo.</br><b>Open to Visitors</b>',
+    hours: '7 AM – 5 PM'
+  },
+  {
+    name: '<u>Lachen Monastery</u>',
+    coords: [27.7161, 88.5567],
+    history: '<br>Ngodub Choling Monastery, founded in 1858, serves as a spiritual center for the Lachen community.</br><b>Open to Visitors</b>',
+    hours: '7 AM – 5 PM'
+  },
+  {
+    name: '<u>Ben Monastery</u>',
+    coords: [27.2438, 88.3796],
+    history: '<br>A small monastery in South Sikkim, part of the region’s traditional Buddhist heritage.</br><b>Open to Visitors</b>',
+    hours: '10 AM – 4 PM'
+  },
+  {
+    name: '<u>Enchey</u>',
+    coords: [27.3358, 88.6192],
+    history:'<br>Built in 1840, it’s associated with the tantric master Druptob Karpo and known for its sacred dances.</br><b>Open to Visitors</b>',
+    hours: '9 AM - 5 PM'
+  },
+  {
+    name: '<u>Lingdum</u>',
+    coords: [27.3308, 88.5794],
+    history:'<br>Zurmang Monastery, founded in 1999, is a modern seat of the Zurmang Kagyu lineage.</br><b>Open to Visitors</b>',
+    hours: '6 AM - 5 PM'
+  },
+  {
+    name: '<u>Tsuk La Khang</u>',
+    coords: [27.3261, 88.6150],
+    history:'<br>Royal chapel built in 1898, used for coronations and rituals by the Sikkimese monarchy.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Sanga Choeling</u>',
+    coords: [27.2639, 88.2214],
+    history:'<br>Built in 1697 by Lhatsun Chempo, it’s one of the oldest monasteries in Sikkim.</br><b>Open to Visitors</b>',
+    hours: '7 AM - 6 PM'
+  },
+  {
+    name: '<u>Lachung</u>',
+    coords: [27.6167, 88.6500],
+    history:'<br>Samten Choling Monastery, built in 1850, is a key Nyingma site in North Sikkim.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Ralong</u>',
+    coords: [27.3283, 88.3347],
+    history:'<br>Founded in 1730 by the fourth Chogyal, it’s a major Karma Kagyu monastery with vibrant mask dance festivals.</br><b>Open to Visitors</b>',
+    hours: '8 AM - 5 PM'
+  },
+  {
+    name: '<u>Kewzing</u>',
+    coords: [27.2800, 88.3200],
+    history:'<br>Established in 1974, it’s a serene Nyingma monastery nestled in the forested hills of South Sikkim.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Do Drul Chorten</u>',
+    coords: [27.3261, 88.6086],
+    history:'<br>Built in 1945 by Trulshik Rinpoche, it houses sacred relics and prayer wheels.</br><b>Open to Visitors</b>',
+    hours: '8 AM - 6 PM'
+  },
+  {
+    name: '<u>Dubdi</u>',
+    coords: [27.6017, 88.3833],
+    history:'<br>The oldest monastery in Sikkim, founded in 1647 after the first Chogyal’s coronation.</br><b>Open to Visitors</b>',
+    hours: '7 AM - 5 PM'
+  },
+  {
+    name: '<u>Kheocheolpalri</u>',
+    coords: [27.3453, 88.1947],
+    history:'<br>Built near the sacred lake, this monastery is tied to Guru Padmasambhava’s blessings.</br><b>Open to Visitors</b>',
+    hours: '6 AM - 6 PM'
+  },
+  {
+    name: '<u>Karthok</u>',
+    coords: [27.2408, 88.5881],
+    history:'<br>A historic Nyingma monastery in Rhenock, known for its peaceful setting and rituals.</br><b>Open to Visitors</b>',
+    hours: 'Open for 24 hrs !'
+  },
+  {
+    name: '<u>Phensang</u>',
+    coords: [27.4203, 88.6103],
+    history:'<br>Founded in 1721 by Jigmed Pawo, it’s one of the largest Nyingma monasteries in Sikkim.</br><b>Open to Visitors</b>',
+    hours: '9 AM - 5 PM'
+  },
+  {
+    name: '<u>Phodong</u>',
+    coords: [27.4128, 88.5839],
+    history:'<br>Established in 1740 by Chogyal Gyurmed Namgyal, it’s a key Karma Kagyu monastery.</br><b>Open to Visitors</b>',
+    hours: '8 AM - 5 PM'
+  },
+  {
+    name: '<u>Labrong</u>',
+    coords: [27.4181, 88.5794],
+    history:'<br>Founded in 1844 by Prince Rigzin Chophel, it’s a Nyingma monastery with unique architecture.</br><b>Open to Visitors</b>',
+    hours: '9:15 AM - 4 PM'
+  },
+  {
+    name: '<u>Tolung</u>',
+    coords: [27.6331, 88.4667],
+    history:'<br>Built in 1789, it houses sacred relics and manuscripts protected during Nepalese invasions.</br><b>Open to Visitors</b>',
+    hours: 'Permit only , Seasonal'
+  },
+  {
+    name: '<u>Bermoik</u>',
+    coords: [27.2264, 88.4575],
+    history:'<br>Founded in 1873, this Karma Kagyu monastery was rebuilt after earthquake damage.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Dalling</u>',
+    coords: [27.2264, 88.3440],
+    history:'<br>Doling Monastery, built in 1718 by Lama Rigdzin Longyang, is famed for its sacred footprints and legends.</br><b>Open to Visitors</b>',
+    hours: '7 AM - 5 PM'
+  },
+  {
+    name: '<u>Yang Yang</u>',
+    coords: [27.3000, 88.4333],
+    history:'<br>Established in 1840, it’s a peaceful monastery near Ravangla with ancient roots.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Namchi</u>',
+    coords: [27.1700, 88.3700],
+    history:'<br>Ngadak Monastery, built in the 17th century, was originally a palace before becoming a spiritual site.</br><b>Open to Visitors</b>',
+    hours: '9 AM - 6 PM'
+  },
+  {
+    name: '<u>Rinchenpong</u>',
+    coords: [27.2353, 88.2685],
+    history:'<br>Built in 1730, it houses a rare Ati Buddha statue and is the third oldest monastery in Sikkim.</br><b>Open to Visitors</b>',
+    hours: '7 AM - 5 PM'
+  },
+  {
+    name: '<u>Tingbung</u>',
+    coords: [27.7167, 88.6167],
+    history:'<br>Founded in 1843 by Lama Tambi, it serves the Dzongu region with annual mask dances.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Burtuk Amalok</u>',
+    coords: [27.3389, 88.6131],
+    history:'<br>Established in 2000 by the Gurung Buddhist Association, it follows the Nyingma tradition.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Wok Parbong</u>',
+    coords: [27.2433, 88.3794],
+    history:'<br>Built in 1915 by Lama Pema Namgyal, it’s a remote Nyingma monastery with active ceremonies.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Mangbru</u>',
+    coords: [27.2430, 88.3790],
+    history:'<br>Founded in 1790, it’s a small monastery in South Sikkim with deep local significance.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Malam</u>',
+    coords: [27.6167, 88.7167],
+    history:'<br>A Lepcha monastery built in 1928, located near Phensang and known for its tranquil hilltop setting.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Line Phagyal</u>',
+    coords: [27.2435, 88.3795],
+    history:'<br>Built in 1862 by Lama Phagyal, it serves the Lepcha community and follows the Nyingma tradition.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  },
+  {
+    name: '<u>Tsungthang</u>',
+    coords: [27.6833, 88.6333],
+    history:'<br>Built in 1788 at a site consecrated by Guru Padmasambhava, it’s revered for its sacred rock and footprint.</br><b>Open to Visitors</b>',
+    hours: '10 AM - 7 PM'
+  }
+];
+
+monasteryData.forEach((monastery) => {
+  const marker = L.marker(monastery.coords).addTo(map)
+    .bindPopup(`<b>${monastery.name}</b><br><i>${monastery.history}</i><br><b>Hours:</b> ${monastery.hours}`);
+
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="card-title">${monastery.name}</div>
+    <div class="card-details"><i>${monastery.history}</i></div>
+    <div class="card-details"><b><u>Visiting Hours:</u></b> ${monastery.hours}</div>
+  `;
+  card.onclick = () => {
+    map.setView(monastery.coords, 13);
+    marker.openPopup();
+  };
+  cardList.appendChild(card);
+});
+ </script>
+  </body> 
+  </html>
+
+
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MonasteryBot </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1><b>MONASTERY</b></h1>
+      <p><i>Ask about monasteries or info.</i></p>
+    </header>
+
+    <main>
+      <section class="chat">
+        <div id="messages" class="messages"></div>
+        <div class="input-row">
+          <input id="question" type="text" placeholder="Ask anything !"/>
+            <button id="send"></button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Fuse.js for fuzzy search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

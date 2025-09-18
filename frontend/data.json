@@ -1,0 +1,250 @@
+[
+  {
+    "id": 1,
+    "name": "Rumtek Monastery",
+    "lat": 27.3306,
+    "lng": 88.5947,
+    "short": "Major monastery near Gangtok.",
+    "details": "Rumtek Monastery is the largest monastery near Gangtok, known as the Dharma Chakra Centre with expansive prayer halls, colorful thangkas, and important Kagyu lineage artifacts"
+  },
+  {
+    "id": 2,
+    "name": "Pemayangtse Monastery",
+    "lat": 27.2895,
+    "lng": 88.2355,
+    "short": "Historic monastery in Pelling.",
+    "details": "Pemayangtse Monastery near Pelling is an ancient Nyingma monastery famed for its elegant architecture, historic murals, and stunning views of Kanchenjunga"
+  },
+  {
+    "id": 3,
+    "name": "Enchey Monastery",
+    "lat": 27.3358,
+    "lng": 88.6192,
+    "short": "Major monastery near Gangtok.",
+    "details": "Enchey Monastery, just outside Gangtok, dates back around two centuries and is noted for its murals, annual Cham dance festival, and hilltop views over the city"
+  },
+  {
+    "id": 4,
+    "name": "Lingdum Monastery",
+    "lat": 27.3308,
+    "lng": 88.5794,
+    "short": "Major monastery near Gangtok.",
+    "details": "Lingdum Monastery is a modern, well-maintained monastery known for its peaceful grounds, study programs, and scenic Himalayan backdrop"
+  },
+  {
+    "id": 5,
+    "name": "Tsuk La Khang Monastery",
+    "lat": 27.3261,
+    "lng": 88.6150,
+    "short": "Major monastery near Gangtok.",
+    "details": "Tsuk La Khang (Tsuklakhang) is the royal chapel and central temple in Gangtok, housing important statues and serving as a focal point for state religious ceremonies"
+  },
+  {
+    "id": 6,
+    "name": "Do Drul Chorten Monastery",
+    "lat": 27.3261,
+    "lng": 88.6086,
+    "short": "Major monastery near Gangtok.",
+    "details": "Do Drul Chorten is a prominent stupa complex in Gangtok surrounded by mani walls and prayer wheels, visited frequently for circumambulation and blessings"
+  },
+  {
+    "id": 7,
+    "name": "Dubdi Monastery",
+    "lat": 27.6017,
+    "lng": 88.3833,
+    "short": "Major monastery near Gangtok.",
+    "details": "Dubdi Monastery, one of Sikkim’s oldest, sits near Yuksom and is valued for its historic two‑story stone architecture and tranquil hilltop setting"
+  },
+  {
+    "id": 8,
+    "name": "Tashiding Monastery",
+    "lat": 27.3083,
+    "lng": 88.2981,
+    "short": "Major monastery near Gangtok.",
+    "details": "Tashiding Monastery, perched on a hill between the Rathong and Rangit rivers, is a sacred site celebrated for its chortens and annual rituals that pilgrims consider purifying"
+  },
+  {
+    "id": 9,
+    "name": "Sanga Choeling Monastery",
+    "lat": 27.2639,
+    "lng": 88.2214,
+    "short": "Major monastery near Gangtok.",
+    "details": "Sanga Choeling Monastery is an old hilltop monastery offering serene meditation spaces and panoramic views, reached by a steep, scenic climb above Pelling"
+  },
+  {
+    "id": 10,
+    "name": "Kheocheolpalri Monastery",
+    "lat": 27.3453,
+    "lng": 88.1947,
+    "short": "Major monastery near Gangtok.",
+    "details": "Khecheopalri (Kheocheolpalri) is a sacred lakeside temple site associated with wish‑fulfilling legends and frequented by pilgrims for its spiritual ambience."
+  },
+  {
+    "id": 11,
+    "name": "Karthok Monastery",
+    "lat": 27.2408,
+    "lng": 88.5881,
+    "short": "Major monastery near Gangtok.",
+    "details": "Kartok (Karthok) Monastery is a historic monastic site known for teaching and traditional religious study in its local community"
+  },
+  {
+    "id": 12,
+    "name": "Phensang Monastery",
+    "lat": 27.4203,
+    "lng": 88.6103,
+    "short": "Major monastery near Gangtok.",
+    "details": "Phensang Monastery is a regional religious center noted for community rituals and its role in local Buddhist life."
+  },
+  {
+    "id": 13,
+    "name": "Phodong Monastery",
+    "lat": 27.4128,
+    "lng": 88.5839,
+    "short": "Major monastery near Gangtok.",
+    "details": "Phodong Monastery is an important Kagyu monastery in North Sikkim, celebrated for its murals, ancient artifacts, and annual festivals"
+  },
+  {
+    "id": 14,
+    "name": "Labrang Monastery",
+    "lat": 27.4181,
+    "lng": 88.5794,
+    "short": "Major monastery near Gangtok.",
+    "details": "Labrang Monastery hosts local ceremonies and serves the spiritual needs of its rural catchment, often featuring colorful ritual dances."
+  },
+  {
+    "id": 15,
+    "name": "Lachen Monastery",
+    "lat": 27.7161,
+    "lng": 88.5567,
+    "short": "Major monastery near Gangtok.",
+    "details": "Lachen is a gateway town to high‑altitude monasteries and mountain scenery, serving as the starting point for visits to nearby Buddhist sites and alpine villages"
+  },
+  {
+    "id": 16,
+    "name": "Lachung Monastery",
+    "lat": 27.6167,
+    "lng": 88.6500,
+    "short": "Major monastery near Gangtok.",
+    "details": "Lachung is a mountain village that hosts small monasteries and acts as an access point for spiritual sites and high‑altitude trekking routes"
+  },
+  {
+    "id": 17,
+    "name": "Tolung Monastery",
+    "lat": 27.6331,
+    "lng": 88.4667,
+    "short": "Major monastery near Gangtok.",
+    "details": "Tolung Monastery is a lesser-known hilltop monastery offering quiet prayer spaces and panoramic views of rural Sikkim."
+  },
+  {
+    "id": 18,
+    "name": "Ralong Monastery",
+    "lat": 27.3283,
+    "lng": 88.3347,
+    "short": "Major monastery near Gangtok.",
+    "details": "Ralong Monastery is known for its vibrant festivals and traditional Tibetan Buddhist ceremonies that draw local devotees and visitors"
+  },
+  {
+    "id": 19,
+    "name": "Bermoik Monastery",
+    "lat": 27.2264,
+    "lng": 88.4575,
+    "short": "Major monastery near Gangtok.",
+    "details": "Bermoik is a locality with nearby temples and small monastic sites that reflect local devotional practices."
+  },
+  {
+    "id": 20,
+    "name": "Dalling Monastery",
+    "lat": 27.2881,
+    "lng": 88.3440,
+    "short": "Major monastery near Gangtok.",
+    "details": "Dalling (Doling) refers to hamlets with nearby monastic shrines and community temples serving village populations."
+  },
+  {
+    "id": 21,
+    "name": "Kewzing Monastery",
+    "lat": 27.2800,
+    "lng": 88.3200,
+    "short": "Major monastery near Gangtok.",
+    "details": "Kewzing is a small community area with nearby temples and serene rural settings often used as a base for visiting local monasteries and nature spots."
+  },
+  {
+    "id": 22,
+    "name": "YangYang Monastery",
+    "lat": 27.3000,
+    "lng": 88.4333,
+    "short": "Major monastery near Gangtok.",
+    "details": "Yang Yang area contains local temples and small monasteries that provide cultural and spiritual services to nearby villages."
+  },
+  {
+    "id": 23,
+    "name": "Namchi Monastery",
+    "lat": 27.1700,
+    "lng": 88.3700,
+    "short": "Major monastery near Gangtok.",
+    "details": "Namchi is a town with important religious landmarks and access to nearby monasteries and pilgrimage routes."
+  },
+  {
+    "id": 24,
+    "name": "Rinchenpong Monastery",
+    "lat": 27.2353,
+    "lng": 88.2685,
+    "short": "Major monastery near Gangtok.",
+    "details": "Rinchenpong is a historic town offering access to monasteries, scenic viewpoints, and cultural sites in West Sikkim."
+  },
+  {
+    "id": 25,
+    "name": "Tingbung Monastery",
+    "lat": 27.7167,
+    "lng": 88.6167,
+    "short": "Major monastery near Gangtok.",
+    "details": "Tingbung is a remote locality with nearby gompas and mountain shrines visited by regional pilgrims."
+  },
+  {
+    "id": 26,
+    "name": "Burtek Amalok Monastery",
+    "lat": 27.3389,
+    "lng": 88.6131,
+    "short": "Major monastery near Gangtok.",
+    "details": "Burtuk Amalok (Burtuk Amolok) includes small temples and local monastic presences near Gangtok’s outskirts."
+  },
+  {
+    "id": 27,
+    "name": "Wok Parbong Monastery",
+    "lat": 27.2433, 
+    "lng": 88.3794,
+    "short": "Major monastery near Gangtok.",
+    "details": "Wok Parbong is a village area containing traditional shrines and community prayer spaces."
+  },
+  {
+    "id": 28,
+    "name": "Mangbru Monastery",
+    "lat": 27.2430, 
+    "lng": 88.3790,
+    "short": "Major monastery near Gangtok.",
+    "details": "Mangbru is a rural locality with nearby gompas and sacred sites that serve local devotees"
+  },
+  {
+    "id": 29,
+    "name": "Line Phagyal Monastery",
+    "lat": 27.2435, 
+    "lng": 88.3795,
+    "short": "Major monastery near Gangtok.",
+    "details": "Line Phagyal is a small settlement with surrounding temples and monastery hamlets."
+  },
+  {
+    "id": 30,
+    "name": "Malam Monastery",
+    "lat": 27.6167, 
+    "lng": 88.7167,
+    "short": "Major monastery near Gangtok.",
+    "details": "Malam is a highland village with access to remote monastic sites and alpine landscapes."
+  },
+  {
+    "id": 31,
+    "name": "Tsungthang Monastery",
+    "lat": 27.6833, 
+    "lng": 88.6333,
+    "short": "Major monastery near Gangtok.",
+    "details": "Tsungthang is a village area with nearby monasteries and local religious traditions integrated into village life."
+  }
+]
