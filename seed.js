@@ -49,6 +49,34 @@ async function seedData(){
             price:400,
             duration:"2 days",
             createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Rumtek Monastery Tour",
+            description:"A spiritual journey through Rumtek,the seat of karmapa.",
+            price:500,
+            duration:"2 Hours",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Pemayangtse Heritage Tour",
+            description:"A monastrery with its historic murals and relics .",
+            price: 700,
+            duration:"3 Hours",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Tashiding Pilgrimage Walk",
+            description:"A serene pilgrimage experience to the sacred Tashiding Monastery.",
+            price:600,
+            duration:"2.5 Hours",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Sanga Choeling Hilltop Tour",
+            description:"Enjoy a trek to Sanga Choeling,one of the oldest monasteries in Sikkim.",
+            price:550,
+            duration:"2 Hours",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
         }
     ];
     const events=[
@@ -64,6 +92,41 @@ async function seedData(){
             date:"2025-06-15",
             monastery:"Tashiding",
             description:"Commemoration of Buddha's birth,enlightenment,and death.",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Pang Lhabsol",
+            date:"2025-09-05",
+            monastery:"Ranbong",
+            description:"Unique festival of Sikkim honoring Mount Khangchendzonga with warrior dance.",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Bumchu Festival",
+            date:"2025-09-05",
+            monastery:"Tashinding",
+            description:"The sacred water vase ritual predicting the future of Sikkim.",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Mask Dance Festivak",
+            date:"2025-12-10",
+            monastery:"Pemayangtse",
+            description:"Colourful Cham dance performance by monks to ward off evil.",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Drukpa Teshi",
+            date:"2025-07-27",
+            monastery:"Phodong",
+            description:"Lord Bhuddha delivered his first sermon on Four Noble Truths.",
+            createdAt:admin.firestore.FieldValue.serverTimestamp()
+        },
+        {
+            name:"Kagyed Dance Festival",
+            data:"2025-12-28",
+            monastery:"Lingdum",
+            description:"Cham dance performed by Losoong.",
             createdAt:admin.firestore.FieldValue.serverTimestamp()
         }
     ];
