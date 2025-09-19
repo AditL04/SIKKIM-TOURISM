@@ -1,6 +1,10 @@
 //index.js
 import express from "express";
 import cors from 'cors';
+import dotenv from "dotenv";
+dotenv.config();
+import OpenAI from "openai";
+const client=new OpenAI({apiKey:process.env.OPENAI_API_KEY });
 import { db, admin } from './firebase.js'; //imports the firestore instance and admin 
 const app=express();
 const PORT=process.env.PORT || 3000;
@@ -112,6 +116,18 @@ app.get('/bookings',async (req, res) => {
 });
 app.get('/',(req, res) => {
     res.send('Server is working! Use /monasteries /tours /events /bookings');
+});
+app.post("/chat",async (req ,res) =>{
+    const { message } =req.body;
+    try{
+        const response=await OpenAI.chat.completions.create({
+            mode:"gpt-40-mini",
+            messages:[{ role:"user",content:message }],
+        });
+        res.json({ reply: response.choices[0].message.content });
+    } catch (err){
+        res.status(500).send(err.message);
+    }
 });
 app.listen(PORT,() =>{
     console.log(`Server running on http://localhost:${PORT}`);
