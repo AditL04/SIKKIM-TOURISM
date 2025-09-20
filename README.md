@@ -12,36 +12,36 @@ The work has been divided among six members, each responsible for a specific mod
 ## Team & Roles
 
 - **PRIYAMVADA KUMAR – Frontend (Map & Navigation)**
-  - Implement interactive map (Leaflet.js)
-  - Add monastery markers, info popups, travel routes
-  - Ensure responsive layout (desktop)
+  - Implements interactive map (Leaflet.js)
+  - Adds monastery markers, info popups, travel routes
+  - Ensures responsive layout (desktop)
 
 - **SHAMBHAVI GUPTA– Frontend (360° Virtual Tour)**
-  - Integrate Panolens.js with React
+  - Integrates Panolens.js with React
   - Load sample 360° monastery images
   - Add pan, zoom, fullscreen controls
-  - Link each monastery marker on map → opens its virtual tour
+  - Links each monastery marker on map → opens its virtual tour
 
 - **HARSHITA SINGH – Frontend (Audio & Narration)**
-  - Add audio narration player for tours
+  - Adds audio narration player for tours
   - Build simple UI: buttons, navigation bar, language toggle
-  - Ensure accessibility (captions/transcripts for audio)
+  - Ensures accessibility (captions/transcripts for audio)
 
 - **RAJANYA GHOSH – Backend & Database**
-  - Set up Firebase Firestore DB
+  - Sets up Firebase Firestore DB
   - Create collections: monasteries, tours, events, bookings
-  - Connect frontend to DB
+  - Connects frontend to DB
 
 - **ADITIYA LAHA – Cultural Calendar & Booking System**
-  - Build event calendar page (list + date filter)
-  - Create booking form (name, email, event)
-  - Save booking info to DB (Firebase)
+  - Builds event calendar page (list + date filter)
+  - Creates booking form (name, email, event)
+  - Saves booking info to DB (Firebase)
   - Show confirmation popup
 
 - **RISHIKA ANAND – Digital Archives & Documentation**
-  - Collect sample scanned images
-  - Create gallery page with zoomable images
-  - Write project documentation (README)
+  - Collects sample scanned images
+  - Created a gallery page with zoomable images
+  - Writes project documentation (README)
 
 ---
 
