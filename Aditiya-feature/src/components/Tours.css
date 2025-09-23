@@ -1,0 +1,67 @@
+/* src/components/Tours.css */
+
+.tours-hero {
+  /* background-image handled inline in Tours.js using PUBLIC_URL */
+}
+
+.tours-hero-inner {
+  padding: 40px 20px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.tours-title {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.tours-sub {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* List / grid below hero */
+.tours-list {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.tour-card {
+  background: #d5eaff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  color: #222;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(16, 24, 40, 0.12);
+}
+
+.tour-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.tour-card p {
+  margin: 0;
+  color: #444;
+  line-height: 1.45;
+}
+
+.empty {
+  text-align: center;
+  color: #666;
+}
