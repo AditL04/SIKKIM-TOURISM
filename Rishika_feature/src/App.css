@@ -1,0 +1,63 @@
+/* App.css */
+
+.App {
+  text-align: center;
+  padding: 2rem;
+  background-color: #71858C;
+  color: #333;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #F6BD60;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #F7EDE2;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background-color: #84A59D;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(10, 56, 5, 0.756);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.monastery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  color:  #F6BD60;
+  margin: 0.5rem 0;
+}
+
+.card p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #F7EDE2;
+}
+.custom-zoom-dialog {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+}
