@@ -1,0 +1,79 @@
+/* Hero (background image applied inline via style prop in JS) */
+.events-hero-inner {
+  padding: 48px 20px;
+  max-width: 1000px;
+}
+
+.events-title {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 700;
+  margin: 0;
+}
+
+.events-sub {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Events list */
+.events-list-wrapper {
+  padding: 40px 20px;
+  background: #f7f7f5;
+}
+
+.events-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background: #fcdd88;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.event-name {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #471a1a;
+}
+
+.event-date {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.event-desc {
+  margin: 0;
+  color: #171010;
+  line-height: 1.45;
+}
+
+.events-error,
+.events-empty {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+}
+.events-error {
+  color: #a00;
+}

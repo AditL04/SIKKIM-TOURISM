@@ -1,0 +1,72 @@
+.bookings-hero {
+  min-height: 28vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px 20px;
+}
+.bookings-hero h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 8px;
+}
+.bookings-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.bookings-main {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.controls input {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.controls button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #6a3fb0, #8f54d0);
+  color: #fff;
+  cursor: pointer;
+}
+.controls button:disabled {
+  background: #aaa;
+  cursor: default;
+}
+
+.msg {
+  margin-bottom: 16px;
+  color: #b00020;
+}
+
+.booking-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.booking-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.booking-card .row {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}

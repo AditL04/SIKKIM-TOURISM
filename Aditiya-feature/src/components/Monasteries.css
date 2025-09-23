@@ -1,0 +1,73 @@
+/* src/components/Monasteries.css */
+
+/* Container/hero area (background done inline in component) */
+.monasteries-hero {
+  min-height: 68vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px;
+  color: #fff; /* text color over the background */
+}
+
+/* inner wrapper */
+.monasteries-inner {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+/* Title + subtitle */
+.monasteries-title {
+  font-size: 3rem;
+  margin: 0 0 8px;
+  line-height: 1;
+  font-weight: 700;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+.monasteries-sub {
+  margin: 0 0 28px;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Grid of monastery "cards" */
+.monasteries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+/* Card style */
+.monastery-card {
+  display: block;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12); /* translucent look on top of hero */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.18s ease, background 0.18s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.monastery-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.22);
+}
+
+/* fallback when no data */
+.no-data {
+  color: rgba(255,255,255,0.9);
+  padding: 24px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 680px) {
+  .monasteries-title { font-size: 2.2rem; }
+  .monasteries-grid { gap: 12px; }
+  .monastery-card { padding: 12px; }
+}
