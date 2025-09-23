@@ -1,21 +1,15 @@
-//firebase.js
 import admin from "firebase-admin";
-import { createRequire } from "module"; 
-const require = createRequire(import.meta.url);
-const serviceAccount= require("./serviceAccountKey.json");
-//let serviceAccount;
-//try{
-//   serviceAccount=require(serviceAccountPath);
-//}catch(err){
-//   console.error(
-//     `\nERROR:Could not load Firebase service account.\nMake sure ${serviceAccountPath} exists.\n`+
-//      'If you are using env var GOOGLE_APPLICATION_CREDENTIALS,set it to the JSON path.\n'
-//   );
-//}
-if (!admin.apps.length){
+import fs from "fs";
+
+const serviceAccount = JSON.parse(
+  fs.readFileSync("./monasterytour-5b277-firebase-adminsdk-fbsvc-58f40fa24e.json", "utf-8")
+);
+
 admin.initializeApp({
-    credential:admin.credential.cert(serviceAccount),
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://monasterytour-5b277-default-rtdb.firebaseio.com"
 });
-}
-const db=admin.firestore();
-export { db, admin};
+
+const db = admin.firestore();
+
+export { db, admin };
