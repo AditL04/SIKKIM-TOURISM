@@ -38,6 +38,7 @@ The work has been divided among six members, each responsible for a specific mod
   - Create booking form (name, email, event)
   - Save booking info to DB (Firebase)
   - Show confirmation popup
+  - create ai chatbot
 
 - **RISHIKA ANAND – Digital Archives & Documentation**
   - Collect sample scanned manuscripts/murals (images)
