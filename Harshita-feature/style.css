@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("images/sikkim.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(12, 1, 1);
+  font-style: italic;
+  text-align: center;
+
+}
+#captionBox {
+  background-color: #E7F2EF; /* Light blue with transparency */
+  padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#caption {
+  font-style: italic;
+  font-size: 18px;
+  color: black;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+audio {
+  margin: 20px 0;
+}
+
+.caption {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.monastery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.monastery-list button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #E7F2EF;
+  color: rgb(19, 3, 3);
+  cursor: pointer;
+  font-style: italic;
+}
+
+.monastery-list button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+/* ✅ NAVBAR */
+.navbar {
+  background: #003366;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: lightblue;
+}
+
+/* ✅ SECTIONS */
+.section {
+  padding: 50px;
+  text-align: center;
+  background: rgba(255,255,255,0.8);
+  margin: 20px;
+  border-radius: 10px;
+}
+
+/* ✅ Banner image */
+.banner-img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* ✅ Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+form button {
+  padding: 10px;
+  border: none;
+  background: #003366;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+form button:hover {
+  background: lightblue;
+  color: black;
+}
