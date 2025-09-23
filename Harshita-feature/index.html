@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sikkim Monasteries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#monasteries">Monasteries</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ HOME SECTION -->
+  <section id="home" class="section">
+    <h1>Welcome to Sikkim Tourism</h1>
+    <p>Explore the Spiritual Beauty of Sikkim’s Monasteries</p>
+    <p>Sikkim, known as the land of monasteries, has many famous Buddhist monasteries like Rumtek, Pemayangtse, and Enchey. They are centers of religion, art, and culture, decorated with murals, prayer flags, and statues. Monasteries also host important festivals with dances and rituals, preserving Sikkim’s Buddhist heritage.</p>
+  
+  </section>
+
+  <!-- ✅ MONASTERIES SECTION -->
+  <section id="monasteries" class="section">
+    <div class="app">
+      <h1>Audio Narration Player</h1>
+
+      <!-- Language Selector -->
+      <label for="languageSelector">Choose Language:</label>
+      <select id="languageSelector">
+        <option value="english">English</option>
+        <option value="hindi">Hindi</option>
+        <!-- later add Nepali, Tibetan, etc. -->
+      </select>
+
+      <!-- Audio Player -->
+      <audio id="audioPlayer" controls>
+        <source id="audioSource" src="" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Caption Box -->
+      <div id="captionBox">
+        <p id="caption"></p>
+      </div>
+
+      <!-- Monastery List -->
+      <div id="monasteryList" class="monastery-list"></div>
+    </div>
+  </section>
+
+  <!-- ✅ ABOUT SECTION -->
+  <section id="about" class="section">
+    <h2>About Sikkim Monasteries</h2>
+    <p>
+      Sikkim is home to over 200 monasteries, each a symbol of peace and spirituality. 
+      They preserve Buddhist culture and history, and attract people worldwide for their unique architecture and serene environment.
+      Sikkim, the land of monasteries, is home to many Buddhist centers that preserve its spiritual and cultural heritage. The grand Rumtek Monastery is the seat of the Karmapa, while Pemayangtse, one of the oldest, houses the wooden sculpture “Zangdok Palri.” Tashiding is sacred for the Bumchu festival, and Sanga Choeling is among the earliest monasteries. In North Sikkim, Lachen and Lachung represent local faith, while Ralong, Kewzing, Ben, and Enchey are known for traditions and festivals. Modern Lingdum Monastery impresses with its grandeur, and Tsuk La Khang serves as the royal chapel. The Do Drul Chorten Stupa and historic Dubdi Monastery mark important sites, while Kheocheopalri is linked with the holy lake. Smaller monasteries like Malam, Karthok, Phensang, Phodong, Rinchenpong, Mangbru, and others also hold regional importance. Together, these monasteries form the spiritual backbone of Sikkim, preserving Buddhism, art, and festivals for centuries.
+    </p>
+  </section>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: info@sikkimtourism.com</p>
+    <p>Phone: +91 12345 67890</p>
+    <p>Address: Gangtok, Sikkim, India</p>
+
+   
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
